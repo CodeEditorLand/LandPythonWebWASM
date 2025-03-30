@@ -1,13 +1,25 @@
 {
-	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
+		"baseUrl": "./",
 		"composite": true,
+		"lib": [
+			"es2020"
+		],
+		"outDir": "Target",
+		"rootDir": "src",
 		"tsBuildInfoFile": "../../out/desktop/compile.tsbuildInfo",
-		"rootDir": ".",
-		"outDir": "../../out/desktop",
-		"lib": ["es2020"],
-		"types": ["node"]
+		"types": [
+			"node"
+		]
 	},
-	"include": ["."],
-	"references": [{ "path": "../common/tsconfig.json" }]
+	"extends": "@playform/build/tsconfig",
+	"include": [
+		".",
+		"src"
+	],
+	"references": [
+		{
+			"path": "../common/tsconfig.json"
+		}
+	]
 }

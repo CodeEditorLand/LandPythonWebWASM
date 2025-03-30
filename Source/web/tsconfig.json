@@ -1,13 +1,24 @@
 {
-	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
+		"baseUrl": "./",
 		"composite": true,
+		"lib": [
+			"es2020",
+			"webworker"
+		],
+		"outDir": "Target",
+		"rootDir": "src",
 		"tsBuildInfoFile": "../../out/web/compile.tsbuildInfo",
-		"rootDir": ".",
-		"outDir": "../../out/web",
-		"lib": ["es2020", "webworker"],
 		"types": []
 	},
-	"include": ["."],
-	"references": [{ "path": "../common/tsconfig.json" }]
+	"extends": "@playform/build/tsconfig",
+	"include": [
+		".",
+		"src"
+	],
+	"references": [
+		{
+			"path": "../common/tsconfig.json"
+		}
+	]
 }

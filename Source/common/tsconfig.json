@@ -1,12 +1,16 @@
 {
-	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
+		"baseUrl": "./",
 		"composite": true,
+		"outDir": "Target",
+		"rootDir": "src",
 		"tsBuildInfoFile": "../../out/common/compile.tsbuildInfo",
-		"rootDir": ".",
-		"outDir": "../../out/common",
 		"types": []
 	},
-	"include": ["."],
+	"extends": "@playform/build/tsconfig",
+	"include": [
+		".",
+		"src"
+	],
 	"references": []
 }
