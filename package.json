@@ -126,7 +126,7 @@
 		"@playform/build": "0.2.3",
 		"@types/node": "22.14.0",
 		"@types/uuid": "10.0.0",
-		"esbuild": "0.25.2",
+		"esbuild": "0.25.0",
 		"localtunnel": "2.0.2",
 		"rimraf": "6.0.1",
 		"serve": "14.2.4",
